@@ -5,7 +5,7 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 
 
 <a href="url">
-<img src="https://github.com/lindahu123/Solidworks-Macros/blob/gh-pages/TabChoices.jpg" align="left" height="360" width="640" >
+<img src="https://www.google.com/search?q=image&safe=strict&client=firefox-b-1-d&sxsrf=ALeKk03ZVR2of7Tcp66JI5yTHJT05FbGww:1607580373306&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjT1-TI38LtAhWbJzQIHSqPBhsQ_AUoAXoECBIQAw&biw=1920&bih=1030&dpr=1#imgrc=saXt3gObqm30jM" align="left" height="360" width="640" >
 </a>
 
 
