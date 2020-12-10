@@ -8,7 +8,8 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 ### Demo
 - Screenshots or demos of your project
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/enjhlnqaXOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/enjhlnqaXOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
 
 ### Installation
 - Installation instructions (or link to the relevant portion of the README)
