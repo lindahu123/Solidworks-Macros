@@ -9,7 +9,7 @@ In order to run this code you will need access to Solidworks and a coding enviro
 
 An python wrapper called PyWin32 also needs to be installed. It allows you to gain access to the Win32 API and allows you to create and use COM objects. To install use the following: 
 ```
-conda install -c anaconda pywin32
+conda install pywin32
 ```
 
 ### Start-Up
