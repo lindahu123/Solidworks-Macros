@@ -7,7 +7,9 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 
 ### Demo
 - Screenshots or demos of your project
-
+<iframe id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+  frameborder="0"></iframe>
 
 ### Installation
 - Installation instructions (or link to the relevant portion of the README)
