@@ -3,7 +3,7 @@
 ### Project Overview
 - The big idea or goal of the project
 
-![Image](TabChoices. jpg)
+![Image](TabChoices .jpg)
 
 
 ### Features
