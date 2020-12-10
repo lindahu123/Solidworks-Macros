@@ -8,11 +8,8 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 ### Demo
 - Screenshots or demos of your project
 
-<div align="left">
-      <a href="https://www.youtube.com/watch?v=5yLzZikS15k">
-         <img src="https://img.youtube.com/vi/5yLzZikS15k/0.jpg" style="width:100%;">
-      </a>
-</div>
+{% include youtube.html id=dQw4w9WgXcQ %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Installation
 - Installation instructions (or link to the relevant portion of the README)
