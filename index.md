@@ -3,6 +3,8 @@
 ### Project Overview
 - The big idea or goal of the project
 
+![Image](simpletab.JPG)
+
 ### Features
 - Unique features of your project
 - Screenshots or demos of your project
