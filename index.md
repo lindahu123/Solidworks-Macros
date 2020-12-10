@@ -34,7 +34,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 
 ### Project Overview
--T he big idea or goal of the project
+- The big idea or goal of the project
 
 ### Features
 - Unique features of your project
