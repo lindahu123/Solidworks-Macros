@@ -7,7 +7,7 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 
 ### Demo
 - Screenshots or demos of your project
--This will eventially have a link to a video of me demoing the code:
+- This will eventially have a link to a video of me demoing the code:
 
 <iframe id="ytplayer" type="text/html" width="640" height="360"
   src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
