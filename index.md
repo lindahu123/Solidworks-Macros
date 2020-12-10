@@ -8,6 +8,7 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 <img src="TabChoices.jpg" align="left" height="360" width="640" >
 </a>
 
+[[/main/TabChoices.jpg]
 
 
 ### Demo
