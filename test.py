@@ -1,8 +1,10 @@
 import win32com.client
 import pythoncom
+from PIL import Image
 
 swYearLastDigit = 9
 sw = win32com.client.Dispatch("SldWorks.Application.%d" % (20+(swYearLastDigit-2))) 
+
 sw.newpart
 model = sw.ActiveDoc
 modelExt = model.Extension
@@ -12,28 +14,35 @@ sketchMgr = model.SketchManager
 eqMgr = model.GetEquationMgr
 ARG_NULL = win32com.client.VARIANT(pythoncom.VT_DISPATCH, None)
 
+
 class PartModel():
-    def __init__(self):
-        self.length = 1/39.3701
-        self.bore_size = 0.5/39.3701
-        self.bore_placement = 1.5/39.3701
+    def __init__(self,length,bore_size,bore_placement,width,arc_rad,L_bracket_length= None):
+        #devision to convert from inches to meters
+        self.length = length/39.3701
+        self.bore_size = 2* bore_size/39.3701
+        self.bore_placement = bore_placement/39.3701
         self.height = self.bore_size + self.bore_placement
-        self.thickness = 0.2/39.3701
-        self.arc_rad = 1.25/39.3701
-        self.L_bracket_length = 1/39.3701
+        self.width = width/39.3701
+        self.arc_rad = arc_rad/39.3701
+        if L_bracket_length == None:
+            self.L_bracket_length = 0
+        else:
+            self.L_bracket_length = L_bracket_length/39.3701
     
     def add_all_global_variables(self):
         eqMgr.Add2(-1,self.create_global_eq("length",self.length), True) 
-        eqMgr.Add2(-1,self.create_global_eq("thickness",self.thickness), True) 
+        eqMgr.Add2(-1,self.create_global_eq("width",self.width), True) 
         eqMgr.Add2(-1,self.create_global_eq("bore size",self.bore_size), True)
         eqMgr.Add2(-1,self.create_global_eq("bore placement",self.bore_placement), True) 
-        eqMgr.Add2(-1,self.create_global_eq("height",self.height), True)
+        eqMgr.Add2(1, "\"height\" = \"bore size\"+ \"bore placement\"", True)
         eqMgr.Add2(-1,self.create_global_eq("arc rad",self.arc_rad), True) 
         eqMgr.Add2(-1,self.create_global_eq("L bracket length",self.L_bracket_length), True) 
 
     def create_simple_tab(self):
+        #make a new sketch on the Front Plane
         self.select_by_id2("Front Plane","PLANE")
         self.insert_sketch()
+        #sketch and dimension main tab shape
         self.create_corner_rectangle(self.length,self.height)
         self.create_circle(self.length,self.bore_placement,self.bore_size)
         self.select_by_id2("Line1", "SKETCHSEGMENT")
@@ -50,7 +59,7 @@ class PartModel():
         self.select_by_id2("Arc1", "SKETCHSEGMENT")
         modelExt.AddDimension(0, 0.001, 0, 0)
         self.select_by_id2("Sketch1", "SKETCH")
-        self.boss_extrude(self.thickness)
+        self.boss_extrude(self.width)
         self.select_by_id2("Front Plane","PLANE")
         self.insert_sketch()
         self.create_circle_by_perimeter(self.length, self.arc_rad)
@@ -78,15 +87,15 @@ class PartModel():
         self.create_corner_rectangle(self.length,self.height)
         self.create_circle(self.length,self.bore_placement,self.bore_size)
         self.select_by_id2("Sketch1", "SKETCH")
-        self.boss_extrude(self.thickness)
+        self.boss_extrude(self.width)
         self.clear_selection()
         self.select_by_id2("Front Plane","PLANE")
         self.insert_plane(self.thickness)
-        self.create_corner_rectangle(self.length, self.thickness)
+        self.create_corner_rectangle(self.length, self.width)
         self.boss_extrude(self.L_bracket_length)
 
-    def insert_plane(self,thickness):
-        model.CreatePlaneAtOffset(thickness, 0)
+    def insert_plane(self,width):
+        model.CreatePlaneAtOffset(width, 0)
     
     def insert_sketch(self):
         sketchMgr.InsertSketch(True)
@@ -106,8 +115,8 @@ class PartModel():
     def extrude_cut(self):
         featureMgr.FeatureCut3(False, False, False, 1, 0, 100, 100, False, False, False, False, 0, 0, False, False, False, False, False, True, True, False, False, False, 0, 0, False)
 
-    def boss_extrude(self,thickness):
-        featureMgr.FeatureExtrusion2(True,False,False,0,0,thickness,0.001,False,False,False,False,0,0,False,False,False,False,True,True,True,0,0, False)
+    def boss_extrude(self,width):
+        featureMgr.FeatureExtrusion2(True,False,False,0,0,width,0.001,False,False,False,False,0,0,False,False,False,False,True,True,True,0,0, False)
 
     def clear_selection(self):
         model.ClearSelection2(True)
@@ -123,19 +132,27 @@ class PartModel():
 
 
 class PartView():
-    def __init__(self,part):
+    def __init__(self):
         pass
 
-    def display_template(self):
-        pass
+    def display_template(self,file):  
+        display(Image.open(file))
 
 
 class PartController():
     def __init__(self):
         pass
-
+        
     def modify_dims(self):
-        pass
+        #steps
+        # 1) find index of equation(s)
+        # 2) delete equations
+        # 3) find index of global variable
+        # 4) delete variable
+        # 5) re enter new variable value
+        # 6) re enter equations
+        # 7) rebuild document
+        model.EditRebuild3
     
     def save_part(self):
         pass
@@ -143,7 +160,22 @@ class PartController():
     def check_connection(self):
         sw.SendMsgToUser("Hello world! SOLIDWORKS API!")
 
-    def get_input(self):
+    def start_input(self):
+        type_input = input(
+            "Enter tab type (S for simple tab, L for L-bracket, c to check connection): ")
+        stripped_input = type_input.strip()
+        return stripped_input
+
+    def initial_dimension_input(self):
+        dimension_list = ["length","bore_size","bore_placement","width","notched_radius"]
+        dimension_inputs = []
+        for dimension in dimension_list:
+            type_input = input(dimension + ":")
+            dimension_inputs.append(float(type_input))
+        return dimension_inputs
+
+    def quit(self):
+        # sys.exit(0)
         pass
     
     def equation_index_dictionary(self):
@@ -153,29 +185,41 @@ class PartController():
             dict1[eqMgr.Equation(i)] = i
             i +=1
 
-def main(self):
+    def dimension_change_input(self):
+        type_input = input(
+            "Dimension to change, q to quit, or s to save")
+        stripped_input = type_input.strip()
+        if stripped_input == "q":
+            self.quit()
+        if stripped_input == "s":
+            pass
+
+def main():
     #steps
     # 1) connect with pythoncom and open new part file
-    swYearLastDigit = 9
-    sw = win32com.client.Dispatch("SldWorks.Application.%d" % (20+(swYearLastDigit-2))) 
-    sw.newpart
-    model = sw.ActiveDoc
-    modelExt = model.Extension
-    selMgr = model.SelectionManager
-    featureMgr = model.FeatureManager
-    sketchMgr = model.SketchManager
-    eqMgr = model.GetEquationMgr
-    ARG_NULL = win32com.client.VARIANT(pythoncom.VT_DISPATCH, None)
-
-    partmodel = PartModel()
-    
-    # 2) prompt for type of bracket
-    # 3) create bracket normally
-    partmodel.create_simple_tab()
-    # 4) use equation manager and global variables to definte the part parametrically
-    partmodel.add_all_global_variables()
-    partmodel.simple_tab_equations()
+    part_controller = PartController()
+    part_view = PartView()
+    # 2) prompt for type of bracket and dimensions
+    stripped_input = part_controller.start_input()
+    if stripped_input == "S":
+        part_view.display_template('simpletab.JPG')
+        dimension_inputs = part_controller.initial_dimension_input()
+        # 3) create bracket normally
+        part_model = PartModel(dimension_inputs[0],dimension_inputs[1],dimension_inputs[2],dimension_inputs[3],dimension_inputs[4])
+        part_model.create_simple_tab()
+        # 4) use equation manager and global variables to definte the part parametrically
+        part_model.add_all_global_variables()
+        part_model.simple_tab_equations()
+    elif stripped_input == "L":
+        part_view.display_template('Ltab.JPG')
+        part_model = PartModel(length,bore_size,bore_placement,thickness,arc_rad,L_bracket_length =  None)
+        part_model.create_l_bracket()
+    elif stripped_input == "c":
+        part_controller.check_connection()
+        part_controller.start_input()
     # 5) prompt user for custom dimensions
-    # 6) continue until user is done
-    # 7) allow user to quit and save part file
+    part_controller.dimension_change_input()
     
+    # 6) allow user to escape or save part file
+
+main()
