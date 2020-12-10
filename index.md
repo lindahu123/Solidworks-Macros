@@ -7,12 +7,11 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 <a href="url">
 <img src="main/TabChoices.jpg" align="left" height="360" width="640" frameborder="10">
 </a>
+</img >
 
 
-
-<h1> 
 ### Demo  
-<h1>
+
 - Screenshots or demos of your project
 - This will eventially have a link to a video of me demoing the code:
 
