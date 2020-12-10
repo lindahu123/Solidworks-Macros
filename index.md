@@ -34,22 +34,22 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 
 ### Project Overview
--The big idea or goal of the project
+-T he big idea or goal of the project
 
 ### Features
-Unique features of your project
-Screenshots or demos of your project
+- Unique features of your project
+- Screenshots or demos of your project
 
-###Installation
--Installation instructions (or link to the relevant portion of the README)
--Download links for your project
--A link to your project’s GitHub page
+### Installation
+- Installation instructions (or link to the relevant portion of the README)
+- Download links for your project
+- A link to your project’s GitHub page
 
-###About me
-Information about you (to the extent you are comfortable)
+### About Me
+- Information about you (to the extent you are comfortable)
 
-###Helpful References
-Attribution for any external resources you used
+### Helpful References
+- Attribution for any external resources you used
 
 
 
