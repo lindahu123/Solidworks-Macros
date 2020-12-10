@@ -1,11 +1,9 @@
 # Welcome to my SolidWorks Project Site
 
 ### Project Overview
-``` 
 The main goal of the project was to learn to use the SolidWorks API and to automate the design of tabs. The basic function of the code it to create a tab in Solidworks CAD based on dimensions inputted by the users. The user can then view the part file and continue to modify dimensions until they are ready to save the file. They are able to choose between the following types of tabs and vary the following dimensions:
-![Image](TabChoices.jpg)
-```
 
+![Image](TabChoices.jpg)
 
 ### Features
 - Unique features of your project
