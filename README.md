@@ -1,5 +1,8 @@
 # Solidworks-Macros README
 
+### Project Overview
+The main goal of the project was to learn to use the SolidWorks API and to automate the design of tabs. The basic function of the code it to create a tab in Solidworks CAD based on dimensions inputted by the users. The user can then view the part file and continue to modify dimensions until they are ready to save the file.
+
 ### Installation
 In order to run this code you will need access to Solidworks and a coding environment in windows. I used 
 [Solidworks 2019](https://www.solidworks.com/sw/support/downloads.htm),
@@ -13,9 +16,7 @@ conda install pywin32
 ```
 
 ### Start-Up
-
-Your submission repository should have a file called README.md written in Markdown. This file should briefly summarize your project and explain how to use your code. By following the instructions in the README, anyone else should be able to run your project, provided they are also running Ubuntu 20.04.
-
-If you installed any additional packages or libraries, you must mention them in the README. Ideally, you should also include installation instructions for these libraries, such as by using the conda or pip commands (which are often found in the documentation for other libraries).
-
-Beyond these requirements, the structure and content of the README is up to you, but we expect that your README should be relatively easy to follow and understand.
+```
+swYearLastDigit = 9
+sw = win32com.client.Dispatch("SldWorks.Application.%d" % (20+(swYearLastDigit-2))) 
+```
