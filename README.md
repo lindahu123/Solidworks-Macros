@@ -16,6 +16,7 @@ conda install pywin32
 ```
 
 ### Start-Up
+
 ```
 swYearLastDigit = 9
 sw = win32com.client.Dispatch("SldWorks.Application.%d" % (20+(swYearLastDigit-2))) 
