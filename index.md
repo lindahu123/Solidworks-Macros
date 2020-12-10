@@ -9,7 +9,7 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 - Screenshots or demos of your project
 
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE"><img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="IMAGE ALT TEXT"></a>
+  <a href="https://www.youtube.com/watch?v=sFee_wt9bGE&list=RDsFee_wt9bGE&start_radio=1"><img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="IMAGE ALT TEXT"></a>
 </div>
 
 ### Installation
