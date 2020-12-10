@@ -28,9 +28,51 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lindahu123/Solidworks-Macros/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+
+
+
+
+### Project Overview
+-The big idea or goal of the project
+
+### Features
+Unique features of your project
+Screenshots or demos of your project
+
+###Installation
+-Installation instructions (or link to the relevant portion of the README)
+-Download links for your project
+-A link to your project’s GitHub page
+
+###About me
+Information about you (to the extent you are comfortable)
+
+###Helpful References
+Attribution for any external resources you used
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Support or Contact
 
