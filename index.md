@@ -5,8 +5,7 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 
 ![Image](TabChoices.jpg)
 
-### Features
-- Unique features of your project
+### Demo
 - Screenshots or demos of your project
 
 ### Installation
@@ -21,50 +20,9 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 - Attribution for any external resources you used
 
 
+[Solidworks API Hierarchy](http://help.solidworks.com/2019/english/api/sldworksapiprogguide/GettingStarted/Understanding_the_SolidWorks_API_Class_Hierarchy.htm?id=d523a164296a4b9a8801e61e8225e8a5#Pg0) 
 
-
-
-
-
-
-
-
-
-
-
-You can use the [editor on GitHub](https://github.com/lindahu123/Solidworks-Macros/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-
-
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-
-
+[Joshua Redstone's blog](https://joshuaredstone.blogspot.com/2015/02/solidworks-macros-via-python.html)
 
 
 
