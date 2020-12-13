@@ -15,8 +15,8 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 - This will eventially have a link to a video of me demoing the code:
 
 <iframe id="ytplayer" type="text/html" width="640" height="360"
-  src="https://www.youtube.com/watch?v=5ROlcDL_kiw"
-  frameborder="0"></iframe>
+src="https://www.youtube.com/watch?v=5ROlcDL_kiw" frameborder="0">
+</iframe>
 
 ### Installation
 - Installation instructions (or link to the relevant portion of the README)
