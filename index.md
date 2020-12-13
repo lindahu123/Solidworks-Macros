@@ -18,6 +18,8 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 src="https://youtu.be/5ROlcDL_kiw" frameborder="0">
 </iframe>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5ROlcDL_kiw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Installation
 - Installation instructions (or link to the relevant portion of the README)
 - Download links for your project
