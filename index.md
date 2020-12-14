@@ -5,8 +5,11 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 
 
 <a href="url">
-<img src="TabChoices.jpg" align="left" height="360" width="640" frameborder="10">
+<img src="https://github.com/lindahu123/Solidworks-Macros/blob/gh-pages/TabChoices.jpg" align="left" height="360" width="640" frameborder="10">
 </a>
+
+
+<img src="https://github.com/lindahu123/Solidworks-Macros/blob/gh-pages/TabChoices.jpg" width="300"/>
 
 ### Demo  
 Below is a video running through an example where a simple tab is built and modified:
