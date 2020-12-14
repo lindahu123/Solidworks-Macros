@@ -31,7 +31,7 @@ Hi, my name is Linda Hu! I am second year student studying Mechanical Engineerin
 ### Helpful References
 It will be helpful to understand the basics of the
 [Solidworks API Hierarchy](http://help.solidworks.com/2019/english/api/sldworksapiprogguide/GettingStarted/Understanding_the_SolidWorks_API_Class_Hierarchy.htm?id=d523a164296a4b9a8801e61e8225e8a5#Pg0).
-There is very extensive documentation on the availible functions in the Solidworks API help site, however none of it is in python since only VBA, VB, and C# are supported. Fortunately, the code that works in python looks very similar to the Visual Basic code that is published and the inputs to the functions are generally standard across all languages. One example is the
+There is very extensive documentation on the availible functions in the Solidworks API help site, however only examples with VBA, VB, and C# (the commonly used languages for Solidworks API) are shown. Fortunately, the code that works in python looks very similar to the Visual Basic code that is published and the inputs to the functions are generally standard across all languages. One example is the
 [CreateCircle Method](http://help.solidworks.com/2019/english/api/sldworksapi/solidworks.interop.sldworks~solidworks.interop.sldworks.imodeldoc~createcircle.html).
 There is a search bar where you can look up other methods. The code does differ for different versions of Solidworks and you can just change the year in the url to look at documentations for all versions. 
 
