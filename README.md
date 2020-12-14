@@ -21,3 +21,5 @@ To start you need to open the SolidWorks application manually, so the start of t
 swYearLastDigit = 9
 sw = win32com.client.Dispatch("SldWorks.Application.%d" % (20+(swYearLastDigit-2))) 
 ```
+You also need to make sure the following setting is turned off:
+![Image](SolidworksSetting.jpg)
