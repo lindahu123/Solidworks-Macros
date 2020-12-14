@@ -5,14 +5,11 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 
 
 <a href="url">
-<img src="main/TabChoices.jpg" align="left" height="360" width="640" frameborder="10">
+<img src="TabChoices.jpg" align="left" height="360" width="640" frameborder="10">
 </a>
 
-
 ### Demo  
-
-- Screenshots or demos of your project
-- This will eventially have a link to a video of me demoing the code:
+Below is a video running through an example where a simple tab is built and modified:
 
 <iframe width="840" height="472.5" src="https://www.youtube-nocookie.com/embed/5ROlcDL_kiw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -49,15 +46,7 @@ There is a search bar where you can look up other methods. The code does differ 
 
 I got started by reading
 [Joshua Redstone's blog](https://joshuaredstone.blogspot.com/2015/02/solidworks-macros-via-python.html)
-which has examples of a couple syntax differences between vb code and python code. 
+which has examples of a couple syntax differences between the visual basic and python code. 
 
-
-
-
-
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
 https://lindahu123.github.io/Solidworks-Macros/
