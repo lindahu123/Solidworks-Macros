@@ -8,7 +8,7 @@ The main goal of the project was to learn to use the SolidWorks API and to autom
 ### Demo  
 Below is a video running through an example where a simple tab is built and modified:
 
-<iframe width="700" height="394" src="https://www.youtube-nocookie.com/embed/5ROlcDL_kiw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZffWP0lwYtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Installation
 In order to run this code you will need access to Solidworks and a coding environment in windows. I used 
