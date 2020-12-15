@@ -23,6 +23,15 @@ An python wrapper called PyWin32 also needs to be installed. It allows you to ga
 conda install pywin32
 ```
 
+### Start-Up
+To start you need to open the SolidWorks application manually, so the start of the code has something to dispatch to. Depending on what version of the SolidWorks you have installed, the variable swYearLastDigit may need to be changed. For example, if you have SolidWorks 2013 you would set that variable equal to 3. It is worth noting that for older versions of SolidWorks the SolidWorks API may have changed and I have not tested the code on any older versions. However, it should work perfectly for versions 2019 and 2020.  
+```
+swYearLastDigit = 9
+sw = win32com.client.Dispatch("SldWorks.Application.%d" % (20+(swYearLastDigit-2))) 
+```
+You also need to make sure the following setting is turned off:
+![Image](SolidworksSetting.jpg)
+
 This is a link to my [project’s GitHub page](https://github.com/lindahu123/Solidworks-Macros)
 
 ### About Me
