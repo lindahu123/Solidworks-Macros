@@ -1,24 +1,29 @@
 import tab_builder
+import pytest
+
+eq1 = ['"length" = 2', '"D4@Sketch1" =  "length"/2',
+       '"D3@Sketch2" =  "length"/2', '"D2@Sketch2" =  "arc rad"- "length"']
+var1 = '"length" = 2'
+var2 = '"width" = 1'
+eq2 = ['"D1@Boss-Extrude1" =  "width"', '"width" = 1']
+var3 = '"bore size" = 1'
+eq3 = ['"D5@Sketch1" =  "bore size"', '"bore size" = 1']
+var4 = '"bore placement" = 1'
+eq4 = ['"D3@Sketch1" =  "bore placement"',
+       '"bore placement" = 1']
+var5 = '"height" = 1'
+eq5 = ['"D2@Sketch1" =  "height"', '"height" = 1']
+var6 = '"arc rad" = 1'
+eq6 = ['"D1@Sketch2" =  "arc rad"', '"arc rad" = 1']
+
+test_cases = [(eq1, var1), (eq2, var2), (eq3, var3),
+              (eq4, var4), (eq5, var5), (eq6, var6)]
 
 
-# check modify equation list
-# check global variable finder
-# check equation_list_maker
-
-equation_list = ['"length" = 0.025399986284007407', '"width" = 0.006349996571001852', '"bore size" = 0.012699993142003704', '"bore placement" = 0.03809997942601111', '"height" = 0.050799972568014815', '"arc rad" = 0.03174998285500926', '"D1@Sketch1" =  "length"', '"D2@Sketch1" =  "height"', '"D3@Sketch1" =  "bore placement"', '"D5@Sketch1" =  "bore size"', '"D4@Sketch1" =  "length"/2', '"D1@Boss-Extrude1" =  "width"', '"D3@Sketch2" =  "length"/2', '"D1@Sketch2" =  "arc rad"', '"D2@Sketch2" =  "arc rad"- "length"']
-
-
-@pytest.mark.timeout(test_global_vars)
-def test_modify_equation_list():
-    length = 1
-    bore_size = 0.25
-    bore_placement = 1.5
-    width = 0.1
-    height = 2
-    arc_rad = 1.25
-    L_bracket_length = None
-
-    part_model = PartModel(length,bore_size,bore_placement,width, height, arc_rad, L_bracket_length)
-    part_model.create_simple_tab()
-    part_model.add_all_global_variables
-    assert data == test_years1 
+@ pytest.mark.parametrize("equation_list, var", test_cases)
+def test_global_var_finder(equation_list, var):
+    part_controller = tab_builder.PartController()
+    input_var = var.split("=")
+    input_var = input_var[0].strip()
+    global_var = part_controller.global_var_finder(equation_list, input_var)
+    assert global_var == var

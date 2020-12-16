@@ -370,7 +370,7 @@ c to check connection): ")
         # get variable from prompted input
         equations_to_modify = self.modify_equation_list(variable)
         # find index of equation(s)
-        self.delele_list_of_equations(equations_to_modify)
+        self.delete_list_of_equations(equations_to_modify)
         global_var = self.global_var_finder(equations_to_modify, variable)
         # delete equations
         equations_to_modify.remove(global_var)
@@ -411,7 +411,7 @@ c to check connection): ")
                 if "@" not in i:
                     return i
 
-    def delele_list_of_equations(self, list_equations):
+    def delete_list_of_equations(self, list_equations):
         """
         Delete all listed equations
         Args:
@@ -505,4 +505,5 @@ def main():
     part_controller.main_mod_dims()
 
 
-main()
+if __name__ == "__main__":
+    main()
