@@ -23,3 +23,6 @@ sw = win32com.client.Dispatch("SldWorks.Application.%d" % (20+(swYearLastDigit-2
 ```
 You also need to make sure the following setting is turned off:
 ![Image](SolidworksSetting.jpg)
+
+More information can be found at the 
+[project website](https://lindahu123.github.io/Solidworks-Macros/)
