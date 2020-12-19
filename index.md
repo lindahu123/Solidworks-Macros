@@ -3,12 +3,12 @@
 ### Project Overview
 The main goal of the project was to learn to use the SolidWorks API and to automate the design of tabs. The basic function of the code it to create a tab in Solidworks CAD based on dimensions inputted by the users. The user can then view the part file and continue to modify dimensions until they are ready to save the file. They are able to choose between the following types of tabs and vary the following dimensions:
 
-<img src="./TabChoices.jpg" width="600"/>
+<img src="./TabChoices.jpg" width="720"/>
 
 ### Demo  
 Below is a video running through an example where a simple tab is built and modified:
 
-<iframe width="600" src="https://www.youtube.com/embed/ZffWP0lwYtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720" src="https://www.youtube.com/embed/ZffWP0lwYtU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Installation
 In order to run this code you will need access to Solidworks and a coding environment in windows. I used 
@@ -30,7 +30,7 @@ swYearLastDigit = 9
 sw = win32com.client.Dispatch("SldWorks.Application.%d" % (20+(swYearLastDigit-2))) 
 ```
 You also need to make sure the following setting is turned off:
-<img src="./SolidworksSetting.jpg" width="600"/>
+<img src="./SolidworksSetting.jpg" width="720"/>
 
 This is a link to my [project’s GitHub page](https://github.com/lindahu123/Solidworks-Macros)
 
